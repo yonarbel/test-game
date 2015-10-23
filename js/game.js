@@ -84,7 +84,7 @@ var obj = addRandomFruit();
 fruitImage.src = obj.imgsrc;
 
 
-var playerName = "benny"; // אם אני ארצה בעתיד להשתמש בשם השחקן
+var playerName = "benny"; // אם אני א רצה בעתיד להשתמש בשם השחקן
 // Game objects
 var player = {
 	speed: 200, // מהירות האובייקט
