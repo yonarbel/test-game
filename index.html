@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="utf-8">
+    <title>תפוס ת'פרי</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+        .settings {
+            position: absolute;
+            right: 50%;
+            width: 200px;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            background-color: green;
+            box-shadow: 1px 1px 1px #000;
+            color: #fff;
+        }
+        
+        .settings:hover {
+            box-shadow: 1px 1px 8px #000;
+            cursor: pointer;
+        }
+        
+        .settings:hover:active {
+            box-shadow: inset 1px 1px 8px #000;
+        }
+        
+        .settings:hover:active {
+            box-shadow: inset 1px 1px 8px #000;
+            cursor: pointer;
+        }
+        
+        .setting_content {
+            text-align: center;
+            border: 1px solid;
+            padding: 35px;
+            position: absolute;
+            width: 580px;
+               top: 10%;
+            display: none;
+    background-color: rgba(255, 255, 255, 0.36);
+        }
+        
+        span#timer {
+    position: absolute;
+    bottom: 0px;
+    font-size: 50px;
+    border: 1px solid #dadada;
+    margin-left: 30px;
+}
+        
+    </style>
+</head>
+
+<body>
+    <script src="js/game.js"></script>
+
+
+
+    <div class="settings"> הגדרות המשחק</div>
+
+    <div class="setting_content">
+
+        <label>תפוז</label>
+        <br>
+        <input id="orange_time" type="number" name="time_on_map">: זמן על המפה
+        <br>
+        <input id="orange_score" type="number" name="score"> : שווי ניקוד
+        <br>
+
+        <label>בננה</label>
+        <br>
+        <input id="banana_time" type="number" name="time_on_map">: זמן על המפה
+        <br>
+        <input id="banana_score" type="number" name="score"> : שווי ניקוד
+        <br>
+
+        <label>אסאי</label>
+        <br>
+        <input id="acai_time" type="number" name="time_on_map">: זמן על המפה
+        <br>
+        <input id="acai_score" type="number" name="score"> : שווי ניקוד
+        <br>
+
+        <label>תפוח</label>
+        <br>
+        <input id="apple_time" type="number" name="time_on_map">: זמן על המפה
+        <br>
+        <input id="apple_score" type="number" name="score"> : שווי ניקוד
+        <br>
+        
+        <br>
+        <button id="change_submit" type="button">החל שינויים</button>
+    </div>
+    <span id="timer"></span>
+    <script>
+    
+    $('.settings').click( function() {
+
+$('.setting_content').fadeToggle();
+
+
+
+});
+        
+            $(document).keyup(function(e) {
+     if (e.keyCode == 27) { // escape key maps to keycode `27`
+        $('.setting_content').fadeToggle();
+    }
+});
+    
+    </script>
+</body>
+
+</html>
